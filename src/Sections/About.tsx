@@ -1,5 +1,3 @@
-import React from "react";
-
 const paragraphs = [
   {
     id: 1,
@@ -50,18 +48,18 @@ const About = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         
         {/* Header Elements */}
-        <span className="mb-3 inline-block text-xs sm:text-sm uppercase tracking-[0.25em] font-semibold text-indigo-600 dark:text-indigo-400">
+        <span className="mb-3 animate-fade-down inline-block text-xs sm:text-sm uppercase tracking-[0.25em] font-semibold text-indigo-600 dark:text-indigo-400">
           — About Me
         </span>
-        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 dark:text-white fraunces">
+        <h1 className="text-4xl animate-fade-down sm:text-5xl font-bold tracking-tight text-slate-900 dark:text-white fraunces">
           Who I Am
         </h1>
 
         {/* Content Split Layout */}
-        <div className="mt-10 lg:mt-14 grid gap-12 lg:grid-cols-[1.3fr_1fr] items-start">
+        <div className="mt-10 lg:mt-14  grid gap-12 lg:grid-cols-[1.3fr_1fr] items-start">
           
           {/* Bio Column */}
-          <div className="space-y-6 sm:space-y-7 lg:max-w-2xl">
+          <div className="space-y-6 sm:space-y-7 lg:max-w-2xl animate-fade-right">
             {paragraphs.map((content) => (
               <p 
                 key={content.id} 
@@ -73,7 +71,7 @@ const About = () => {
           </div>
 
           {/* Skill Blocks Container */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-5 w-full">
+          <div className="grid grid-cols-1 animate-fade-left md:grid-cols-2 lg:grid-cols-1 gap-5 w-full">
             {skillCategories.map((cat) => (
               <div
                 key={cat.id}

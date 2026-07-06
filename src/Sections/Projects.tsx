@@ -19,8 +19,8 @@ const Projects = () => {
       <div className="absolute -bottom-40 right-10 w-100 h-100 bg-linear-to-tr from-blue-500/10 dark:bg-sky-500/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative z-10 mx-auto max-w-7xl">
-        <span className="mb-4 inline-block text-sm uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400">— Projects</span>
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-slate-900 dark:text-white fraunces">Featured Projects</h1>
+        <span className="mb-3 animate-fade-down inline-block text-xs sm:text-sm uppercase tracking-[0.25em] font-semibold text-indigo-600 dark:text-indigo-400">— Projects</span>
+        <h1 className="text-4xl animate-fade-down sm:text-5xl font-bold tracking-tight text-slate-900 dark:text-white fraunces">Featured Projects</h1>
 
         {/* for the loading */}
         {loading && (
@@ -34,7 +34,7 @@ const Projects = () => {
 
         {/* for the project display */}
         {!loading && !error && (
-            <div className="mt-8 sm:mt-10 grid gap-6 grid-cols-1 md:grid-cols-2">
+            <div className="mt-8 sm:mt-10 grid gap-6 grid-cols-1 md:grid-cols-2 animate-fade-in">
                 {/* Display the featured project first, if it exists */}
                 {featured && <ProjectCard project={featured} featured />}
                 {others.map((project) => (
