@@ -9,7 +9,7 @@ const ContactForm = () => {
 
     const isSubmitting = status.type === "loading";
   return (
-    <form onSubmit={emailHandler} className="animate-fade-left hadow-md shadow-slate-700/50 dark:shadow-indigo-600/20 rounded-2xl p-10 bg-slate-200/60 dark:bg-slate-400/10">
+    <form onSubmit={emailHandler} className="animate-fade-left shadow-md shadow-slate-700/50 dark:shadow-indigo-600/20 rounded-2xl p-10 bg-slate-200/60 dark:bg-slate-400/10">
       <FormInput 
         label = "Your name goes here..."
         type = {"text" as "text" | "email"}

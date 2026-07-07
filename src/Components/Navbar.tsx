@@ -90,7 +90,7 @@ const Navbar = () => {
         </div>
 
         {/* Added hidden max-md utility target layer block to prevent action button clashes with mobile burger toggles */}
-        <div className='max-md:hidden bg-indigo-800 py-2 px-4 flex items-center justify-center rounded-md cursor-pointer hover:shadow-xl hover:-translate-y-1 transition duration-300'>
+        <div className='max-md:hidden btn-fill-top-down py-2 px-4 flex items-center justify-center rounded-md cursor-pointer hover:shadow-xl hover:-translate-y-1 transition duration-300'>
           <Link to="/contact" className='text-white text-sm  transition duration-300'>
             Hire Me
           </Link>
