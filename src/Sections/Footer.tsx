@@ -1,11 +1,11 @@
-import { BsGithub, BsLinkedin } from 'react-icons/bs';
+import { BsGithub, BsLinkedin, BsWhatsapp } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
     <section id="footer" className="w-full bg-gray-100  dark:bg-slate-600/10  border-t border-t-gray-300 overflow-hidden py-10 text-slate-600 dark:text-slate-400">
       
-      <div className="flex flex-col px-5 md:px-10 lg:px-20 max-w-7xl justify-between mx-auto md:flex-row md:items-baseline">
+      <div className="flex flex-col px-5 md:px-10 lg:px-20 max-w-7xl items-center gap-5 justify-between mx-auto md:flex-row md:items-baseline">
               {/* Brand Logo */}
       <div className="flex items-baseline md:-mt-6">
         <h1 className='text-md font-bold dark:text-slate-300 text-slate-900'>Grajos</h1>
@@ -27,6 +27,11 @@ const Footer = () => {
         <Link to="https://www.linkedin.com/in/joshua-babatunde-8592a43b0" target="_blank" rel="noopener noreferrer" className="ml-4 hover:text-slate-900 dark:hover:text-white transition-colors" aria-label="LinkedIn Profile">
           {/* LinkedIn Icon */}
           <BsLinkedin className="text-2xl"/>
+        </Link>
+
+        <Link to="https://api.whatsapp.com/send/?phone=2348109771933" target="_blank" rel="noopener noreferrer" className="ml-4 hover:text-slate-900 dark:hover:text-white transition-colors" aria-label="WhatsApp Profile">
+          {/* WhatsApp Icon */}
+          <BsWhatsapp className="text-2xl"/>
         </Link>
       </div>
       

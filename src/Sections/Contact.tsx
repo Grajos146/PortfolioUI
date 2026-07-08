@@ -24,7 +24,7 @@ const Contact = () => {
           <Link to="https://www.linkedin.com/in/joshua-babatunde-8592a43b0" target="_blank" className="py-4 px-10 sm:px-12 rounded-md ring-1 ring-indigo-600/20  bg-slate-200 dark:bg-indigo-600/10 text-indigo-600 dark:text-white hover:ring-indigo-600 dark:hover:ring-indigo-600/50 hover:-translate-y-1 transition duration-300">
             <BsLinkedin className="text-2xl"/>
           </Link>
-          <Link to="https://wa.me/08109771933" target="_blank" className="py-4 px-10 sm:px-12 rounded-md ring-1 ring-indigo-600/20  bg-slate-200 dark:bg-indigo-600/10 text-indigo-600 dark:text-white hover:ring-indigo-600 dark:hover:ring-indigo-600/50 hover:-translate-y-1 transition duration-300">
+          <Link to="https://api.whatsapp.com/send/?phone=2348109771933" target="_blank" className="py-4 px-10 sm:px-12 rounded-md ring-1 ring-indigo-600/20  bg-slate-200 dark:bg-indigo-600/10 text-indigo-600 dark:text-white hover:ring-indigo-600 dark:hover:ring-indigo-600/50 hover:-translate-y-1 transition duration-300">
             <BsWhatsapp className="text-2xl"/>
           </Link>
         </div>
@@ -36,7 +36,7 @@ const Contact = () => {
 
       </div>
 
-      
+
     </section>
   )
 }

@@ -240,30 +240,62 @@ body {
   }
 }
 
-
 .animate-fade-in {
-  animation: fadeIn 5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
   will-change: opacity;
 }
 
+.animate-fade-in.is-visible {
+  opacity: 1;
+  animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
 .animate-fade-up {
-  animation: fadeUp 5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  will-change: opacity, translate;
+  opacity: 0;
+  transform: translateY(20px);
+  will-change: opacity, transform;
+}
+
+.animate-fade-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .animate-fade-down {
-  animation: fadeDown 5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  will-change: opacity, translate;
+  opacity: 0;
+  transform: translateY(-20px);
+  will-change: opacity, transform;
+}
+
+.animate-fade-down.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeDown 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .animate-fade-left {
-  animation: fadeLeft 5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  will-change: opacity, translate;
+  opacity: 0;
+  transform: translateX(20px);
+  will-change: opacity, transform;
+}
+
+.animate-fade-left.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+  animation: fadeLeft 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .animate-fade-right {
-  animation: fadeRight 5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  will-change: opacity, translate;
+  opacity: 0;
+  transform: translateX(-20px);
+  will-change: opacity, transform;
+}
+
+.animate-fade-right.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+  animation: fadeRight 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .delay-100 { animation-delay: 100ms; }
