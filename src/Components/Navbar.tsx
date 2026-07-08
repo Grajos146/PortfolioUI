@@ -53,7 +53,7 @@ const Navbar = () => {
     : 'bg-white/80 dark:bg-slate-900/80 shadow-md backdrop-blur-xl border-b border-slate-200/30 dark:border-slate-800/30';
 
   return (
-    <nav className={`animate-fade-in transition-all px-5 md:px-10 lg:px-20 duration-300 ${navbarClass}`}>
+    <nav className={`transition-all px-5 md:px-10 lg:px-20 duration-300 ${navbarClass}`}>
 
 
       <section className='flex items-center py-4 max-w-7xl mx-auto justify-between'>
