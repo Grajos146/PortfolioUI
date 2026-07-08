@@ -31,6 +31,17 @@ const Navbar = () => {
       observer.observe(heroSection);
       return () => observer.disconnect();
     }, [isDarkMode]);
+
+    useEffect(() => {
+      const handleResize = () => {
+        if (window.innerWidth >= 768) {
+          setIsMenuOpen(false);
+        }
+      };
+
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }, []);
     
     const NavLinks = 
     [
@@ -56,7 +67,7 @@ const Navbar = () => {
     <nav className={`transition-all px-5 md:px-10 lg:px-20 duration-300 ${navbarClass}`}>
 
 
-      <section className='flex items-center py-4 max-w-7xl mx-auto justify-between'>
+      <section className='relative flex items-center py-4 max-w-7xl mx-auto justify-between'>
              {/* Brand Name */}
 
       <div className="flex items-baseline -mt-6">
@@ -108,7 +119,7 @@ const Navbar = () => {
       {/* Dropdown Menu for Mobile View */}
       {isMenuOpen && ( 
         // Adjusted absolute positioning coordinates (top-16 right-6) to snap perfectly in place alongside mobile layout safety parameters
-        <div className='absolute top-16 right-6 bg-white/95 dark:bg-slate-900/95 border border-slate-200/50 dark:border-slate-800/80 backdrop-blur-md rounded-xl shadow-xl p-4 flex flex-col space-y-3 w-52 animate-fade-in'>
+        <div className='absolute top-16 right-6 bg-white/95 dark:bg-slate-900/95 border border-slate-200/50 dark:border-slate-800/80 backdrop-blur-md rounded-xl shadow-xl p-4 flex flex-col space-y-3 w-52 transition-opacity duration-200'>
           {NavLinks.map(link => (
             <Link key={link.name} to={link.path} className='text-indigo-900 dark:text-slate-200 py-1.5 px-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800 text-sm font-medium transition duration-200' onClick={() => setIsMenuOpen(false)}>
               {link.name}
