@@ -34,7 +34,7 @@ const Projects = () => {
 
         {/* for the project display */}
         {!loading && !error && (
-            <div className="mt-8 sm:mt-10 grid gap-6 grid-cols-1 md:grid-cols-2 animate-fade-in">
+            <div className="mt-8 sm:mt-10 grid gap-6 grid-cols-1 md:grid-cols-2 transition-all duration-300">
                 {/* Display the featured project first, if it exists */}
                 {featured && <ProjectCard project={featured} featured />}
                 {others.map((project) => (

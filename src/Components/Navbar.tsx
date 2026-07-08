@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import { FaBars, FaMoon, FaSun } from 'react-icons/fa';
 import { FaXmark } from 'react-icons/fa6';
-import { Link } from 'react-router-dom';
 
 const Navbar = () => {
 
@@ -45,10 +44,10 @@ const Navbar = () => {
     
     const NavLinks = 
     [
-        { name: "Home", path:"/"},
-        { name: "About", path:"/about"},
-        { name: "Projects", path:"/projects"},
-        { name: "Contact", path:"/contact"}
+        { name: "Home", href:"#hero"},
+        { name: "About", href:"#about"},
+        { name: "Projects", href:"#projects"},
+        { name: "Contact", href:"#contact"}
     ];
 
     const toggleMode = () => {
@@ -83,9 +82,9 @@ const Navbar = () => {
 
         <div className='max-md:hidden flex items-center space-x-7'>
           {NavLinks.map(link => (
-            <Link key={link.name} to={link.path} className='text-indigo-900 dark:text-slate-200 py-1 text-sm font-medium hover-underline transition duration-300'>
+            <a key={link.name} href={link.href} className='text-indigo-900 dark:text-slate-200 py-1 text-sm font-medium hover-underline transition duration-300'>
               {link.name}
-            </Link>
+            </a>
           ))}
         </div>
 
@@ -102,9 +101,9 @@ const Navbar = () => {
 
         {/* Added hidden max-md utility target layer block to prevent action button clashes with mobile burger toggles */}
         <div className='max-md:hidden btn-fill-top-down py-2 px-4 flex items-center justify-center rounded-md cursor-pointer hover:shadow-xl hover:-translate-y-1 transition duration-300'>
-          <Link to="/contact" className='text-white text-sm  transition duration-300'>
+          <a href="#contact" className='text-white text-sm transition duration-300'>
             Hire Me
-          </Link>
+          </a>
         </div>
 
       </div>
@@ -121,15 +120,15 @@ const Navbar = () => {
         // Adjusted absolute positioning coordinates (top-16 right-6) to snap perfectly in place alongside mobile layout safety parameters
         <div className='absolute top-16 right-6 bg-white/95 dark:bg-slate-900/95 border border-slate-200/50 dark:border-slate-800/80 backdrop-blur-md rounded-xl shadow-xl p-4 flex flex-col space-y-3 w-52 transition-opacity duration-200'>
           {NavLinks.map(link => (
-            <Link key={link.name} to={link.path} className='text-indigo-900 dark:text-slate-200 py-1.5 px-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800 text-sm font-medium transition duration-200' onClick={() => setIsMenuOpen(false)}>
+            <a key={link.name} href={link.href} className='text-indigo-900 dark:text-slate-200 py-1.5 px-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800 text-sm font-medium transition duration-200' onClick={() => setIsMenuOpen(false)}>
               {link.name}
-            </Link>
+            </a>
           ))}
           
           {/* Mobile fall-through display button link rendering inside hidden toggle viewport panels */}
-          <Link to="/contact" className='bg-indigo-800 py-2.5 px-4 text-center rounded-md text-white text-sm font-semibold shadow-xs hover:bg-indigo-700 transition duration-200' onClick={() => setIsMenuOpen(false)}>
+          <a href="#contact" className='bg-indigo-800 py-2.5 px-4 text-center rounded-md text-white text-sm font-semibold shadow-xs hover:bg-indigo-700 transition duration-200' onClick={() => setIsMenuOpen(false)}>
             Hire Me
-          </Link>
+          </a>
         </div>
       )}
         

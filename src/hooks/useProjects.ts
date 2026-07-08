@@ -11,7 +11,8 @@ export const useProjects = () => {
 
    
         const fetchProjects = async () => {
-             setLoading(true);
+            setLoading(true);
+            setError(null);
             try {
                 const res = await api.get<Project[]>("/projects");
                 setProjects(res.data);
