@@ -36,12 +36,12 @@ const Main = () => {
           {/* Action Buttons */}
           <div className='flex flex-col animate-fade-up sm:flex-row items-center justify-center lg:justify-start gap-4 my-8 w-full max-w-md mx-auto lg:mx-0'>
             <div className='btn-fill-top-down w-full sm:w-auto flex items-center justify-center rounded-lg gap-2 px-6 py-3.5 cursor-pointer hover:shadow-xl hover:-translate-y-1 transition duration-300'>
-              <Link className='text-white text-sm font-semibold' to="/projects">View My Work</Link>
+              <a className='text-white text-sm font-semibold' href="#projects">View My Work</a>
               <BsArrowRight strokeWidth={0.5} size={16} className='text-white font-semibold'/>
             </div>
 
             <div className='btn-fill-top-down-transparent w-full sm:w-auto flex items-center justify-center group ring-1 ring-indigo-800/10 dark:ring-indigo-400/30 hover:ring-indigo-800 hover:text-white rounded-lg px-6 py-3.5 cursor-pointer hover:shadow-xl hover:-translate-y-1 transition duration-300'>
-              <Link to="/contact" className='text-sm text-slate-900 dark:text-slate-100 transition duration-300 w-full text-center'>Say Hello</Link>
+              <a href="#contact" className='text-sm text-slate-900 dark:text-slate-100 transition duration-300 w-full text-center'>Say Hello</a>
             </div>
           </div>
 
